@@ -1,0 +1,32 @@
+<section class="Facturas">
+    <div class="container" >
+        <table class="table">
+            <thead class="thead-dark">
+                <tr class="tabla-head">
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre menu</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Elementos</th>
+                    <th scope="col">Lugar</th>
+                    <th scope="col">Codigo</th>
+                    <th scope="col">Accion</th>                      
+                    <th scope="col">Total pago</th>
+                    <th scope="col">Fecha</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let pago of pedidos">
+                <tr class="tabla">
+                    <th scope="row">{{pago.id}}</th>
+                    <th scope="row">{{pago.tipoMenu}}</th>
+                    <th scope="row">{{pago.cantidad}}</th> 
+                    <th scope="row">{{pago.Elementos}}</th>
+                    <th scope="row">{{pago.lugar_pedido}}</th>
+                    <th scope="row">{{pago.codigo_pedido}}</th>  
+                    <th scope="row">{{pago.Tipo_factura}}</th>                      
+                    <th scope="row">{{pago.totalPago}}</th>   
+                    <th scope="row">{{pago.fechaFactura | date: 'dd-MM-yyyy'}}</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
